@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { getSocialMediaAccounts } from "services";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Github, Twitter, Facebook, YouTube, Telegram, LinkedIn, DevTo, Instagram } from "components/AllSvg.jsx";
+import { Github, Twitter, Facebook, YouTube, Telegram, LinkedIn, DevTo, Instagram, Fiverr } from "components/AllSvg.jsx";
 import data, { darkTheme, mediaQueries } from "data";
 
-const socialMediaIcons = ["github", "twitter", "facebook", "youtube", "telegram", "linkedin", "devto", "instagram"];
+const socialMediaIcons = ["github", "twitter", "facebook", "youtube", "telegram", "linkedin", "devto", "instagram", "fiverr"];
 
 const motionAnimationConfig = delay => ({
   initial: {
@@ -112,6 +112,8 @@ export default function SocialIcons({ theme }) {
                 ? <DevTo {...svgStyleConfig} />
                 : iconName === "instagram"
                 ? <Instagram {...svgStyleConfig} />
+                : iconName === "fiverr"
+                ? <Fiverr {...svgStyleConfig} />
                 : iconName
               }
             </a>
